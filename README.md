@@ -18,4 +18,16 @@ Nearshore image classification
 - After setting up the environment, you can launch Jupyter Notebook from within the environment like this:
   - run the command `poetry run jupyter notebook`
 
+# Script Information
+
+## `scripts/coastline_tile_pipeline.py`
+
+This script does the following: Given a .tif file and a shapefile bundle with coastline information that spans the region of the .tif file, this script will
+- tile the .tif into NxN regions (default=512x512 pixels),
+- determine which of these regions intersect the coastline
+- convert the intersecting regions to PNGs and save these files
+- create a map image showing the intersecting tiles as PNGs and the coastline contour, along with the .tif boundary
+
+Example output from this script can be seen in `examples/coastline_tiles_plot.png`.
+
 
