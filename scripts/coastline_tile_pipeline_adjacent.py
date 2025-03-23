@@ -57,11 +57,15 @@ if coastline.crs != tif_crs:
     coastline = coastline.to_crs(tif_crs)
 
 coastline = coastline[coastline.is_valid & coastline.geometry.notnull()]
-coastline_clip = coastline.clip(tif_bounds)
-coastline_outline = coastline_clip.copy()
+# coastline_clip = coastline.clip(tif_bounds)
+# coastline_outline = coastline_clip.copy()
+# coastline_outline["geometry"] = coastline_outline.boundary
+# coastline_union = coastline_outline.geometry.union_all()
+# landmass_union = coastline_clip.geometry.union_all()
+coastline_outline = coastline.copy()
 coastline_outline["geometry"] = coastline_outline.boundary
 coastline_union = coastline_outline.geometry.union_all()
-landmass_union = coastline_clip.geometry.union_all()
+landmass_union = coastline.geometry.union_all()
 
 # === STEP 3: Build tile GeoDataFrame ===
 tile_records = []
@@ -134,7 +138,9 @@ fig, ax = plt.subplots(figsize=(12, 12))
 gpd.GeoSeries([tif_bounds], crs=tif_crs).boundary.plot(ax=ax, edgecolor="black", linewidth=1, label="TIFF extent")
 
 # Coastline
-coastline_outline.plot(ax=ax, color="blue", linewidth=1.5, label="Coastline")
+# coastline_outline.plot(ax=ax, color="blue", linewidth=1.5, label="Coastline")
+coastline_plot = coastline_outline.clip(tif_bounds)
+coastline_plot.plot(ax=ax, color="blue", linewidth=1.5, label='Coastline')
 
 # Category outlines
 colors = {"intersecting": "red", "adjacent": "orange", "other": "black"}
