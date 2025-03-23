@@ -61,7 +61,7 @@ coastline = coastline[coastline.is_valid & coastline.geometry.notnull()]
 coastline_clip = coastline.clip(tif_bounds)
 coastline_outline = coastline_clip.copy()
 coastline_outline["geometry"] = coastline_outline.boundary
-coastline_union = coastline_outline.unary_union
+coastline_union = coastline_outline.geometry.union_all()
 
 intersecting_tiles = []
 
