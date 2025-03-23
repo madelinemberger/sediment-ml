@@ -1,0 +1,26 @@
+[project]
+name = "sediment-ml"
+version = "0.1.0"
+description = ""
+authors = [
+    {name="Madeline Berger", email="mmtb@hawaii.edu"},
+    {name="Ari Essunfeld", email="ariessunfeld@gmail.com"},
+    {name="Paulina Essunger", email="paulina.essunger@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)",
+    "matplotlib (>=3.10.1,<4.0.0)",
+    "notebook (>=7.3.3,<8.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "rasterio (>=1.4.3,<2.0.0)",
+    "geopandas (>=1.0.1,<2.0.0)",
+    "shapely (>=2.0.7,<3.0.0)",
+    "numpy (>=2.2.4,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
