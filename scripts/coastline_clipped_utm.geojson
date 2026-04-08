@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "coastline_clipped_utm",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32604" } },
+"features": [
+
+]
+}

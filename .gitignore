@@ -1,0 +1,10 @@
+# Large data files
+data/tifs/20220118_200909_30_2457_3B_Visual.tif
+*.tiff
+*.tif
+
+# Model Weights
+*.pth
+
+# OS generate
+.DS_Store

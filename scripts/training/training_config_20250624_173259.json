@@ -1,0 +1,44 @@
+{
+  "timestamp": "20250624_173259",
+  "hyperparameters": {
+    "tile_size": 256,
+    "batch_size": 2,
+    "learning_rate": 0.0001,
+    "min_learning_rate": 1e-05,
+    "num_epochs": 50,
+    "warmup_epochs": 30,
+    "lr_reduction_factor": 0.85,
+    "patience": 6,
+    "seed": 100,
+    "num_workers": 0,
+    "validation_split": 0.2
+  },
+  "paths": {
+    "img_dir": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/data",
+    "msk_dir": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/data",
+    "coastline_shp": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/data/shapefiles/coastline.shp",
+    "model_path": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/best_sediment_model_20250624_173259.pth",
+    "config_path": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/training_config_20250624_173259.json",
+    "training_history_plot": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/training_history_20250624_173259.png"
+  },
+  "data": {
+    "images_processed": [
+      {
+        "image_stem": "20220106_205637_22_240c_3B_Visual_clip",
+        "tif_path": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/data/20220106_205637_22_240c_3B_Visual_clip.tif",
+        "mask_path": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/data/20220106_205637_22_240c_3B_Visual_clip_mask.png"
+      },
+      {
+        "image_stem": "20180206_raw_planet_Kihei",
+        "tif_path": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/data/20180206_raw_planet_Kihei.tif",
+        "mask_path": "/Users/ariessunfeld/Documents/personal/UH/madeline-berger/sediment-ml/scripts/training/data/20180206_raw_planet_Kihei_mask.png"
+      }
+    ],
+    "train_tiles": [
+      {
+        "image_stem": "20180206_raw_planet_Kihei",
+        "tile_name": "20180206_raw_planet_Kihei__00003_00003",
+        "category": "adjacent",
+        "row": 3,
+        "col": 3,
+        "has_signal": 
